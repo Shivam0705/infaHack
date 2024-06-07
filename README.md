@@ -1,20 +1,13 @@
-# Chatbot Deployment with Flask and JavaScript
-
-In this tutorial we deploy the chatbot I created in [this](https://github.com/python-engineer/pytorch-chatbot) tutorial with Flask and JavaScript.
-
-This gives 2 deployment options:
-- Deploy within Flask app with jinja2 template
-- Serve only the Flask prediction API. The used html and javascript files can be included in any Frontend application (with only a slight modification) and can run completely separate from the Flask App then.
-
-## Initial Setup:
-This repo currently contains the starter files.
+# HackAitHon Chatbot Deployment 
 
 Clone repo and create a virtual environment
 ```
-$ git clone https://github.com/python-engineer/chatbot-deployment.git
-$ cd chatbot-deployment
-$ python3 -m venv venv
-$ . venv/bin/activate
+$ git clone https://github.com/Shivam0705/infaHack.git
+#Create a new folder inside with name: chatbot-deployment
+cd chatbot-deployment
+python3 -m venv venv
+cd venv\Scripts
+activate
 ```
 Install dependencies
 ```
@@ -25,28 +18,19 @@ Install nltk package
 $ (venv) python
 >>> import nltk
 >>> nltk.download('punkt')
+>> quit()
 ```
-Modify `intents.json` with different intents and responses for your Chatbot
 
 Run
 ```
 $ (venv) python train.py
 ```
-This will dump data.pth file. And then run
-the following command to test it in the console.
-```
-$ (venv) python chat.py
-```
+Open this directory: C:\(your path)\HackAIThon in command prompt using administrator
 
-Now for deployment follow my tutorial to implement `app.py` and `app.js`.
+pip install Flask torch torchvision nltk
 
-## Watch the Tutorial
-[![Alt text](https://img.youtube.com/vi/a37BL0stIuM/hqdefault.jpg)](https://youtu.be/a37BL0stIuM)  
-[https://youtu.be/a37BL0stIuM](https://youtu.be/a37BL0stIuM)
+Now open the folder in VS Code and run this file: app.py ( from right side top)
 
-## Note
-In the video we implement the first approach using jinja2 templates within our Flask app. Only slight modifications are needed to run the frontend separately. I put the final frontend code for a standalone frontend application in the [standalone-frontend](/standalone-frontend) folder.
+![image](https://github.com/Shivam0705/HackAIThon/assets/55856632/086363c8-d7c6-4ae3-b976-82340f84ccd5)
 
-## Credits:
-This repo was used for the frontend code:
-https://github.com/hitchcliff/front-end-chatjs
+
