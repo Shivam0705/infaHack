@@ -1,0 +1,247 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, thanks for visiting! how can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting! Come back again soon"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!"]
+    },
+    {
+      "tag": "features",
+      "patterns": [
+        "What all the features I can explore here?",
+        "features",
+        "What kinds of features are there?",
+        "What is the best thing here?",
+        "Tell me in brief what are the features available here",
+        "What I can do here?"
+      ],
+      "responses": [
+        "This is the place where your created assets comes into live action",
+        "1. You could create as many customer records for multiple organizations",
+        "2. You can search for thousands of records by using our advance search system",
+        "3. You can import a file with huge data according to your need",
+        "4. You can make use of work flow inbox for approve/reject the events",
+        "5. You can create instances of your hierarchies for a better parent-child relationship view",
+        "6. You can check the status of all your running jobs",
+        "7. You can create reports and charts for your organization"
+      ]
+    },
+    {
+      "tag": "purpose",
+      "patterns": [
+        "What you can do?",
+        "What is the purpose of you here?",
+        "Why do we need you?",
+        "Tell me about your self?",
+        "purpose"
+      ],
+      "responses": [
+        "In order to provide customer E2E guide with an aim to allow user to explore all possible features in BUI Apps",
+        "there is a need of an interactive chatbot which will guide the customers on how they can make use of all features, resolved some common frequently asked questions related to the product",
+        "so that they won't have to refer the documentation again and again and can continue their respective work just by interacting with me"
+
+      ]
+    },
+    {
+      "tag": "Business Entity",
+      "patterns": [
+        "Business Entity",
+        "What is a Business Entity?",
+        "What is BE?"
+      ],
+      "responses": [
+        "Business model can be represented here as a Business Entity with require fields as per the Business requirement."
+      ]
+    },
+    {
+      "tag": "record",
+      "patterns": [
+        "record",
+        "What is a record ?",
+        "What is a BE record ?",
+        "How to create a record ?",
+        "How to create a BE record ?"
+      ],
+      "responses": [
+        "Record is an instance of Business Entity providing the values for fields defined in the Business Entity.",
+        "Follow the below steps for your understanding:",
+        "You can create a record by clicking on the New icon on top left side pannel ",
+        "Select your Organization and hit create button ",
+        "Provide the required values and submit!"
+      ]
+    },
+    {
+      "tag": "Search",
+      "patterns": [
+        "Search",
+        "What is Search icon text box ?",
+        "How to search for a record ?",
+        "How search works ?",
+        "What is filtered search ?",
+        "Facets",
+        "What is Facet ?"
+      ],
+      "responses": [
+        "User can search for the different records for Business Entities defined in the Organization.",
+        "We use Facets so that user can do a advanced search based on attribute value level defined for the Business Entities ",
+        "Follow the below steps for your understanding: ",
+        "1: On the header of the page, there is a dropdown which lists all the Business entities defined in organization and provides user the advantage of selecting multiple Business entity at once ",
+        "2: User can even give keywords and different expressions like John*,~,/Joan_([0-9]+)/ etc to fetch the required results based on requirement",
+        "3: User can do a detailed search in attribute level defined for the Business Entities"
+
+      ]
+    },
+    {
+      "tag": "Hierarchy",
+      "patterns": [
+        "Hierarchy",
+        "hierarchy instance",
+        "create instance",
+        "create hierarchy instance",
+        "Hierarchy tab",
+        "Instance",
+        "How to create hierarchy ?",
+        "How to create hierarchy instance ?",
+        "draft in hierarchy",
+        "What is draft in hierarchy ?"
+      ],
+      "responses": [
+        "Hierarchy can be used to link multiple business entities in hierarchical approach.",
+        "In customer 360 user can create new hierarchy instances for the defined Hierarchy model in Business 360 console. ",
+        "All the defined hierarchy models in B360 console are displayed in the Hierarchies tab with the available instances. ",
+        "Hierarchy instances can be searched using Find box in Hierarchy tab.",
+        "Follow the below steps for your understanding: ",
+        "1. Click on hierarchy tab in the left Navigation menu",
+        "2. Click on plus icon next to find box and select the hierarchy model and provide the instance name and click on create button",
+        "3. User can create a hierarchy and add root nodes and child nodes and can leave the hierarchy without saving .This wil be in draft state until submitted.",
+        "4. User can click on show Draft hierarchy and view only the Hierarchies in Draft state.",
+        "5. Once changes are made, we can submit the entire hierarchy"
+      ]
+    },
+    {
+      "tag": "File Import",
+      "patterns": [
+        "File Import",
+        "IFI",
+        "Intelligent File Import",
+        "What is File Import ?",
+        "What is IFI ?",
+        "Ingress",
+        "How to run file import job",
+        "How file import works?"
+      ],
+      "responses": [
+        "User can import the loads of records data into the MDM system like Business entities, Relationships and Hierarchies through uploading CSV files from their local system.",
+        "Follow the below steps for your understanding: ",
+        "1. Click on File Import tab in the left Navigation menu ",
+        "2. Browse csv file from your system and preview of your file will be displayed and user can select source system as well",
+        "3: Next step is to map your fields with your target Business entities, Relationships or Hierarchies where you can drag fields from left side of source to right side of target",
+        "4. Last step is to preview your changes and can save your mapping as well for future purpose "
+      ]
+    },
+    {
+      "tag": "Workflow inbox",
+      "patterns": [
+        "Workflow inbox",
+        "Business events",
+        "Workflow approval",
+        "What is Workflow inbox ?",
+        "How Business events works ? ",
+        "What is Business events",
+        "What is Business events ?"
+
+      ],
+      "responses": [
+        "User is allowed to handle the business event workflows from this screen.",
+        "The actions(Create, update, delete, merge and unmerge) that are performed on records of business entity is monitored through this based on the user roles defined in B360 console.",
+        "User is allowed to claim and then to approve, reject, send back or release the workflow task based on the requirement.",
+        "Follow the below steps for your understanding: ",
+        "1. Click on Workflow Inbox tab in the left Navigation menu ",
+        "2. Look for your workflow approval task by checking title, priority, creator and status. you can make use of refresh icon also!",
+        "3: Once you have your task ready, you can open it and click on claim button on top right for performing further actions",
+        "4. Now you user can edit the record and can do modifications ",
+        "5. Last step where user can approve, reject, send back or release the workflow task based on the requirement "
+      ]
+    },
+    {
+      "tag": "My jobs",
+      "patterns": [
+        "My jobs",
+        "Jobs",
+        "job",
+        "How can I check the job status ?",
+        "Job status",
+        "Status of the job",
+        "File import jobs"
+        
+
+      ],
+      "responses": [
+        "My jobs provides over all status of your File import jobs",
+        "The job name, link , status and details are available in this screen.",
+        "Follow the below steps for your understanding: ",
+        "1. Click on My jobs tab in the left Navigation menu ",
+        "2. User could see all the with their start end end time and status ",
+        "3: User can click on any job and a dashboard will open with all the details ",
+        "4. There will be 4 Major steps: Transform, Load, Index for Search and Generate tokens ",
+        "5. User can expand each of these steps and can leverage various parameters such as Overview, Runtime Parameters, Metrics and Error "
+      ]
+    },
+    {
+      "tag": "Reports ",
+      "patterns": [
+        "Reports ",
+        "Reports and Charts ",
+        "Charts",
+        "What are Reports ?",
+        "What are Charts ?"
+
+      ],
+      "responses": [
+        "Reports and Charts gives the data in Graphical representation for the defined outline for a Business Entity",
+        "Follow the below steps for your understanding: ",
+        "1. You can create report by clicking on New  icon top right ",
+        "2. You can view already created reports on Reports tab in the left Navigation menu ",
+        "3: When creating, user has to provide display name and select it's data source ",
+        "4. Then user can define Dimensions, Measures and Filter according to their need ",
+        "5. Lastly, we can apply the changes and save the same "
+      ]
+    },
+    {
+      "tag": "Home screen",
+      "patterns": [
+        "What is Home screen ?",
+        "Home screen",
+        "Home Page"
+      ],
+      "responses": [
+        "Its a Dashboard  with different layouts which provides user the feasibility to view the data in required predefined format like graphical representation,pie charts.",
+        "Notification icon: located at top right gives License details like expiry wil be shown here. All job details like success failure will be shown here .Shoutouts wil be shown here.",
+        "? icon: This helps you to understand more about Informatica and its products and helps you to connect with customer support",
+        "User Name Dropdown: Organization(org) details like Org ID and user name.",
+        "User Settings icon: User profile details and Settings for Source Code Control Credentials"
+      ]
+    }
+  ]
+}
