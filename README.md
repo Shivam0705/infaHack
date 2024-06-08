@@ -25,7 +25,7 @@ Run
 ```
 $ (venv) python train.py
 ```
-Open this directory: C:\(your path)\HackAIThon in command prompt using administrator
+Open this directory: C:\(your path)\infaHack in command prompt using administrator
 
 pip install Flask torch torchvision nltk
 
