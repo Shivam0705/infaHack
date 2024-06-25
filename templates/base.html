@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 <head>
     <meta charset="UTF-8">
     <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-		body {
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-			justify-content: center;
-			align-items: center;
-		}
-	</style>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
-
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
 <div class="container">
@@ -39,6 +37,7 @@
             <div class="chatbox__footer">
                 <input type="text" placeholder="Write a message...">
                 <button class="chatbox__send--footer send__button">Send</button>
+                <button class="chatbox__voice--footer voice__button">🎤</button>
             </div>
             <button class="ticket__button">Raise a Ticket</button>
         </div>
@@ -48,10 +47,10 @@
     </div>
 </div>
 
-    <script>
-        $SCRIPT_ROOT = {{ request.script_root|tojson }};
-    </script>
-    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+<script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson }};
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
 </html>
