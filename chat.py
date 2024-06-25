@@ -1,8 +1,6 @@
 import random
 import json
-
 import torch
-
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
@@ -37,27 +35,25 @@ def get_response(msg):
     _, predicted = torch.max(output, dim=1)
 
     tag = tags[predicted.item()]
-    new_list = []
-    er_string ="Sorry! I couldn't understand! Please be specific..."
-    err_ar=er_string.split('\n')
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
     if prob.item() > 0.85:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+                # Check if the tag is for web automation
+                if tag == "create_record":
+                    return ["perform_create_record"]
                 return intent['responses']
 
-    return err_ar
-
+    return ["Sorry! I couldn't understand! Please be specific..."]
 
 if __name__ == "__main__":
     print("Let's chat! (type 'quit' to exit)")
     while True:
-        # sentence = "do you use credit cards?"
         sentence = input("You: ")
-        if sentence == "quit":
+        if sentence.lower() == "quit":
             break
 
         resp = get_response(sentence)
         print(resp)
-
